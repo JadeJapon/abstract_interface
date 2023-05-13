@@ -21,6 +21,6 @@ class user extends Brand
    }
       public function update($id, array $params)
 {
-
+sadasd
 }
 
