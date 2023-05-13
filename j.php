@@ -11,25 +11,16 @@ abstract class Employee
 {
     $this->conn=new mysqli($this->servername, $this->username, $this->password, $this->dbname);
 }
-    abstract public function insert(array $params);
-    abstract public function update($id, array $params);
+    abstract public function insert():string;
 }
 
-class user extends Employee
+class dbname extends Employee
 {
-    public function insert($params)
-{
-    }
-   $sql = "INSERT INTO Guest (firstname, lastname, email)
-VALUES ('Jade', 'Japon', 'jadejapon1@gmail.com')";
-{
-    }
-    $sql = "INSERT INTO Guest (firstname, lastname, email)
-VALUES ('Jade', 'Japon', 'jadejapon1@gmail.com')";
-{
-    }
-    $sql = "INSERT INTO Guest (firstname, lastname, email)
-VALUES ('Jade', 'Japon', 'jadejapon1@gmail.com')";
-{
-    }
+    public function db():string
+    {
+        $dbname="CREATE DATABASE IF NOT EXISTS $this->dbname";
+        return $this->conn->query($dbname);
+}
+
+
 
